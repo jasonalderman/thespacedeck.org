@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="theme-color" content="#333333">
+
+	%sapper.base%
+
+  <link rel="stylesheet" href="css/reset.min.css">
+	<link rel="stylesheet" href="css/campspace.css">
+	<link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!-- Sapper creates a <script> tag containing `src/client.js`
+	     and anything else it needs to hydrate the app and
+	     initialise the router -->
+	%sapper.scripts%
+
+	<!-- Sapper generates a <style> tag containing critical CSS
+	     for the current page. CSS for the rest of the app is
+	     lazily loaded when it precaches secondary pages -->
+	%sapper.styles%
+
+	<!-- This contains the contents of the <svelte:head> component, if
+	     the current page has one -->
+	%sapper.head%
+  <meta property="og:url"         content="http://thespacedeck.com/" />
+	<meta property="og:type"        content="website" />
+	<meta property="og:title"       content="The Space Deck" />
+	<meta property="og:description" content="The Space Deck is a co-created deck of 56 spacemaking cards. Each card presents a prompt for a way to make space in your life and work. Space for you to grow. Space for others to communicate and do their best work." />
+	<meta property="og:image"       content="http://thespacedeck.com/share-image.png" />
+  
+  <!-- typekit for museo sans rounded -->
+	<script src="//use.typekit.net/jij4fql.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
+	<!--[if IE]>
+	<script type="text/javascript">document.querySelector("html").className += ' noflip'; </script>
+	<![endif]-->
+</head>
+<body>
+	<!-- The application will be rendered inside this element,
+	     because `src/client.js` references it -->
+	<div id="sapper">%sapper.html%</div>
+
+  <footer class="footer cf" role="contentinfo">
+
+    <div class="copyright">
+      <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Creative Commons Attribution Share-Alike Noncommercial">
+				<img src="img/cc.svg" alt="Creative Commons" />
+				<img src="img/by.svg" alt="Creative Commons" />
+				<img src="img/sa.svg" alt="Creative Commons" />
+				<img src="img/nc.svg" alt="Creative Commons" />
+			</a>
+    </div>
+
+    <div class="colophon">
+      <a href="https://svelte.dev/">Made with Svelte & Sapper.</a>
+    </div>
+
+  </footer>
+</body>
+</html>
