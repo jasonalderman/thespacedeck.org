@@ -6,7 +6,7 @@ The default template for setting up a [Sapper](https://github.com/sveltejs/sappe
 
 ## Getting started
 
-1. Follow the gentle instructions here to install node, if you do not already have it installed.
+1. Follow the [gentle instructions here](https://svelte.dev/blog/svelte-for-new-developers) to install [node](https://nodejs.org/en/), if you do not already have it installed.
 2. Run `npm i` from the terminal in the root directory of this repository.
 3. Run `npm run dev` to run a dev server **_or_** `npm run export` to export the site. Right now, these build to a `__sapper__` folder, but we'll update the script to build to a `docs` folder that will let us use GitHub pages.
 
