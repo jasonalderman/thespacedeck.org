@@ -1,36 +1,18 @@
-# sapper-template
+# The Space Deck
+
+*README is forthcoming! 🚀*
 
 The default template for setting up a [Sapper](https://github.com/sveltejs/sapper) project. Can use either Rollup or webpack as bundler.
 
-
 ## Getting started
 
+1. Follow the gentle instructions here to install node, if you do not already have it installed.
+2. Run `npm i` from the terminal in the root directory of this repository.
+3. Run `npm run dev` to run a dev server **_or_** `npm run export` to export the site. Right now, these build to a `__sapper__` folder, but we'll update the script to build to a `docs` folder that will let us use GitHub pages.
 
-### Using `degit`
+*and now the original template instructions, still to be cleaned up*
 
-To create a new Sapper project based on Rollup locally, run
-
-```bash
-npx degit "sveltejs/sapper-template#rollup" my-app
-```
-
-For a webpack-based project, instead run
-
-```bash
-npx degit "sveltejs/sapper-template#webpack" my-app
-```
-
-[`degit`](https://github.com/Rich-Harris/degit) is a scaffolding tool that lets you create a directory from a branch in a repository.
-
-Replace `my-app` with the path where you wish to create the project.
-
-
-### Using GitHub templates
-
-Alternatively, you can create the new project as a GitHub repository using GitHub's template feature.
-
-Go to either [sapper-template-rollup](https://github.com/sveltejs/sapper-template-rollup) or [sapper-template-webpack](https://github.com/sveltejs/sapper-template-webpack) and click on "Use this template" to create a new project repository initialized by the template.
-
+----
 
 ### Running the project
 
