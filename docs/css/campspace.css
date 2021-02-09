@@ -1,0 +1,1032 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 317px;
+}
+
+/* *** HEADER *** */
+header.header {
+    /*background-color: lightgray;*/ /* just for testing */
+    padding: 1em 5%;
+    /* height: 4em; */
+/*     position: relative; */
+}
+
+header a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+header a.active {
+    color: #555;
+    border-left: solid 6px;
+    cursor: default;
+}
+
+header img {
+    height: 5em;
+    display: inline-block;
+/*     max-width: 50%; */
+}
+
+header #menutoggle {
+	display: block;
+	width: 5em;
+	height: 5em;
+	float: right;
+/* 	position: relative; */
+	/* background-color: red; */
+	text-align: center;
+	padding: 3.25em 0 0;
+	font-size: 0.75em;
+	text-transform: uppercase;
+  cursor: pointer;
+/* font-weight: bold; */
+	background: transparent url('../img/menu_open.svg') scroll no-repeat center top;
+}
+header #menutoggle.open {
+	background: transparent url('../img/menu_close.svg') scroll no-repeat center top;
+}
+body.menuopen {
+	overflow-y: hidden;
+}
+
+header h1 {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	font-size: 2.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: black;
+}
+header h1 span {
+	font-weight: 100;
+	display: block;
+	line-height: 0.5em
+}
+
+ul.menu {
+    display: block;
+    position: relative;
+}
+ul.menu li {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+/*
+    margin-left: 0.7em;
+    padding: 1em;
+*/
+    border-bottom: 1px solid #999;
+}
+ul.menu li a {
+	display: block;
+	margin: 0;
+	padding: 1em 1.7em;
+	
+}
+ul.menu li a:active {
+	background-color: black;
+	color: white;
+}
+
+header.header nav {
+    display: none;
+    font-size: 2em;
+    position: absolute;
+    top: 3.25em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255,255,255,0.95);
+    z-index: 500;
+}
+
+header.header #menutoggle.open + nav {
+  display: block;
+}
+/*
+header.header nav:after {
+    content: '((( Shake to shuffle deck )))';
+    font-size: 0.45em;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    padding: 2em;
+}*/
+
+@media only screen and (min-width: 900px) {
+	header img {
+		height: 7em;
+	}
+	header #menutoggle {
+		display: none;
+		visibility: collapse;
+	}
+	
+	header.header nav {
+    display: inline-block;
+    opacity: 1;
+    position: static;
+    float: right;
+    top: 0;
+    font-size: 2em;
+    background: transparent;
+	}	
+	
+	ul.menu {
+    display: block;
+    position: relative;
+    top: 0.8em;
+	}
+	ul.menu li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-left: 0.7em;
+    border: none;
+    padding: 0;
+	}
+	ul.menu li a {
+		display: inline;
+		padding: 0;
+	}
+	ul.menu li a:active {
+		background-color: transparent;
+		color: inherit;
+	}
+	header a.active {
+    color: #555;
+    border: none;
+    border-bottom: solid 3px;
+    cursor: default;
+	}
+}
+
+/* *** HOME (TEMPORARY) *** */
+
+main.home {
+	padding: 0 1em;
+}
+main.home div.text {
+	text-align: center;
+}
+
+ul.teaser {
+	display: block;
+	text-align: center;
+}
+ul.teaser>li {
+	display: block;
+	padding: 1em;
+	border-bottom: solid 1px #aaa;
+}
+ul.teaser>li a {
+	display: inline-block;
+	vertical-align: middle;
+}
+ul.teaser>li img {
+	width: 2.5em;
+	height: 2.5em;
+	display: block;
+}
+ul.teaser>li h3 {
+	display: inline-block;
+	margin-left: 1em;
+	vertical-align: middle;
+}
+ul.teaser>li h3 a {
+	vertical-align: baseline;
+}
+ul.teaser>li span.suit {
+	color: #999;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	line-height: 1.25em;
+	margin-left: 1em;
+	vertical-align: middle;
+}
+
+ul.teaser>li.card {
+	display: inline-block;
+	font-size: 12px;
+	border: none;
+	padding: 0.75em;
+}
+
+ul.teaser>li.card>a {
+	display: block;
+}
+
+/* *** ABOUT *** */
+#about-picture {
+  width: 100%;
+  content: url('../img/about/museumcamp2015_sm.jpg');
+  max-width: 640px;
+  display: block;
+  margin: 0 auto 1em;
+}
+@media only screen and (min-width: 640px) {
+	#about-picture {
+    width: 100%;
+    content: url('../img/about/museumcamp2015_lg.jpg');
+    max-width: 100%;
+	}
+}
+.main {
+/* 	text-align: center; */
+}
+.main>div.text {
+	margin: 0 auto;
+	width: 80%;
+}
+.about>div.text {
+	font-size: 0.85em;
+}
+@media only screen and (min-width: 375px) {
+	.about>div.text {
+		font-size: 1em;
+	}
+}
+	.main>div.text a {
+		color: black;
+	}
+	.main>div.text h1 {
+		text-align: center;
+		margin: 0 0 0.9em;
+		color: #666666;
+		font-weight: bold;
+		font-size: 1.5em;
+		text-transform: uppercase;
+	}
+	.main>div.text p {
+		margin: 0 auto 1em;
+		max-width: 765px
+	}
+	.main>div.text ul {
+		margin: 0 auto 1em;
+		max-width: 765px;
+	}
+		.main>div.text ul li {
+			display: list-item;
+	    list-style: disc;
+	    margin: 0 0 0.3em 1.2em;
+		}
+	.main>div.text h2 {
+	  text-align: center;
+	  font-size: 1.5em;
+	  text-transform: uppercase;
+	  font-weight: bold;
+	  color: #666666;
+	  margin: 2em 0 1em;
+	}
+	.about>div.text ul li {
+		list-style: none;
+		margin: 0 0 0.3em 0;
+		display: block;
+		min-height: 4em;
+	}
+	.about>div.text li a {
+		font-weight: bold;
+		text-decoration: none;
+	}
+	.about>div.text li img {
+		display: inline-block;
+		width: 4em;
+		vertical-align: middle;
+		float: left;
+		padding-right: 0.5em;
+	}
+	@media only screen and (min-width: 860px) {
+		.about>div.text li img {
+			float: none;
+			padding-right: 0;
+		}
+	}
+		
+.sponsors {
+    text-align: center;
+    padding: 0 2%;
+}
+
+.sponsors h2 {
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    margin: 3em 0 0.5em;
+}
+
+.sponsors h3 {
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    margin: 3em 0 1em;
+}
+
+.sponsors li {
+    display: block;
+    padding: 1.25em;
+    margin: 0;
+}
+
+.sponsors figure {
+    margin: 0;
+    padding: 0 0.6em;
+}
+
+.sponsors figure a {
+    display: block;
+}
+
+.sponsors img {
+    max-height: 9em;
+    max-width: 100%;
+    /* display: block; */
+    vertical-align: middle;
+    /*padding-bottom: 1em;*/
+}
+.sponsors figure.mailchimp img {
+	max-width: 250px;
+}
+
+@media only screen and (min-width: 470px) {
+	.sponsors li {
+		display: inline-block;
+	}
+	.sponsors img {
+		max-height: 12em;
+		max-width: 400px;
+	}
+}
+
+/* *** SUIT *** */
+.main.suits h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #666666;
+}
+
+ul.suits li {
+    display: inline-block;
+/*     padding: 1.6em 1em; */
+		padding: 0;
+    margin: 1em 0.5em;
+    border-radius: 14px;
+    /* border: solid 1px #aaaaaa; */
+    width: 11em;
+    height: 10em;
+    vertical-align: top;
+    text-align: center;
+    /* box-shadow: 0 4px 6px rgba(0,0,0,0.35); */
+    background-color: #f9f9f9;
+}
+
+ul.suits {
+    text-align: center;
+}
+
+ul.suits li img {
+    width: 6.5em;
+    height: 6.5em;
+    margin: 0 auto;
+}
+
+ul.suits li a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.7em 0;
+}
+
+ul.suits li h3 {
+	display: block;
+	margin: 0 auto;
+	text-transform: uppercase;
+	color: #666666;
+	letter-spacing: 1px;
+}
+
+
+
+div.suit-intro {
+	display: block;
+	text-align: left;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 768px;
+	padding: 1em;
+	background-color: #f9f9f9;
+	border-radius: 1em;
+	border-bottom: solid 1px #999;
+	min-height: 9em;
+}
+div.suit-intro img {
+	display: block; 
+	max-height: 7em;
+	width: 7em;
+	float: left;
+}
+
+main.main div.suit-intro h2 {
+    font-size: 2em;
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    line-height: 1.4em;
+    padding-top: 0.25em;
+}
+
+div.suit-intro p.credit {
+    padding-top: 1.5em;
+    font-size: 0.66667em;
+}
+
+div.suit-intro a {
+	color: black;
+}
+
+/* *** CARD *** */
+
+/* > nav (temporary) */
+
+nav#activitynav {
+    position: relative;
+    width: 80%;
+    height: 2.5em;
+    display: block;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 400px) {
+	nav#activitynav {
+		width: 98%;
+		margin: 0 1%;
+		height: 0;
+		top: 12em;		
+	}
+}
+
+#activitynav a, #activitynav span {
+	text-decoration: none;
+	color: transparent;
+	display: inline-block;
+	font-size: 1em;
+	position: relative;
+/* 	top: 12em; */
+	height: 2em;
+	width: 2em;
+	background-color: #999;
+	border-radius: 100%;
+	cursor: pointer;
+	padding: 0.5em 0.65em;
+}
+@media only screen and (min-width: 475px) {
+	#activitynav a, #activitynav span {
+		height: 3em;
+		width: 3em;
+		padding: 0.75em 0.975em; 
+	}
+}
+#activitynav span {
+	opacity: 0.35;
+	cursor: default;
+}
+#prevcard {
+	float: left;
+	background: #999 url('../img/prev_arrow.svg') no-repeat scroll center center;
+	background-size: 50% 50%;
+	
+}
+#nextcard {
+	float: right;
+	background: #999 url('../img/next_arrow.svg') no-repeat scroll center center;
+	background-size: 50% 50%;
+}
+#activitynav a:active {
+	background-color: #444;
+}
+/* END nav */
+
+
+
+.card {
+    /* width: 225px; */
+		/* height: 630px; */
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
+		margin: 0 auto;
+		position: relative;
+		width: 20em;
+}
+
+@media only screen and (min-width: 440px) {
+	.card {
+		font-size: 18px;
+	}
+	nav#activitynav {
+		top: 13.5em
+	}
+}
+@media only screen and (min-width: 768px) {
+	.card {
+		font-size: 16px;
+		width: 42em;
+	}
+	nav#activitynav {
+		top: 12em;
+	}
+}
+@media only screen and (min-width: 848px) {
+	.card {
+		font-size: 18px;
+	}
+	nav#activitynav {
+		top: 13.5em
+	}
+}
+@media only screen and (min-width: 976px) {
+	.card {
+		font-size: 21px;
+	}
+	nav#activitynav {
+		top: 17em;
+		max-width: 1075px;
+	}
+}
+@media only screen and (min-width: 976px) {
+	.card {
+		font-size: 21px;
+	}
+	nav#activitynav {
+		top: 17em;
+		max-width: 1075px;
+		margin: 0 auto;
+	}
+}
+@media only screen and (min-width: 1600px) {
+	.card {
+		font-size: 28px;
+	}
+	nav#activitynav {
+		top: 22em;
+		max-width: 1264px;
+		margin: 0 auto;
+	}
+}
+
+.card>section, .card>a>section {
+    width: 20em;
+    display: inline-block;
+    vertical-align: top;
+    border: solid 1px #999;
+    border-radius: 20px;
+    padding: 1.2222em;
+    height: 28em;
+    position: relative;
+    text-align: left;
+}
+
+.card section.front {
+    /* width: 450px; */
+    background-color: black;
+    color: white;
+}
+
+p.card-number {
+    font-size: 0.8889em;
+    float: right;
+    display: block;
+}
+
+p.suit-name {
+    position: absolute;
+    right: 1em;
+    -webkit-transform-origin: bottom right;
+    -ms-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 0.2em;
+    text-transform: uppercase;
+    color: #999999;
+}
+
+section.front img.card-icon {
+    height: 9.5556em;
+		/* background-color: gray; */
+    width: 9.5556em;
+    border: none;
+}
+
+.card section.front h1 {
+    font-size: 1.5556em;
+    margin-top: 0.6428em;
+    padding-bottom: 0.4285em;
+    border-bottom: 1px solid #939598;
+    width: 85%;
+}
+
+section.front p.description {
+    line-height: 1.2em;
+    padding: 0.5em 0;
+}
+
+section.front .related {
+    font-size: 0.8889em;
+		margin-top: 1em;
+}
+section.front .related a {
+	text-decoration: none;
+	color: #fefeff;
+	font-weight: bold;
+}
+
+.related h3 {
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+section.front::after {
+    content: '';
+    position: absolute;
+    right: 1.2222em;
+    bottom: 1.2222em;
+    width: 5.777em;
+    height: 5.777em;
+    background-color: transparent;
+}
+.activist section.front::after {
+	content: url('../img/suits/activist.svg');
+}
+.courage section.front::after {
+	content: url('../img/suits/courage.svg');
+}
+.creativity section.front::after {
+	content: url('../img/suits/creativity.svg');
+}
+.environmental section.front::after {
+	content: url('../img/suits/environmental.svg');
+}
+.movement section.front::after {
+	content: url('../img/suits/movement.svg');
+}
+.relational section.front::after {
+	content: url('../img/suits/relational.svg');
+}
+.ritual section.front::after {
+	content: url('../img/suits/ritual.svg');
+}
+.stillness section.front::after {
+	content: url('../img/suits/stillness.svg');
+}
+
+.card section.back>h1 {
+    font-size: 1.5556em;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin: 0;
+    padding: 0.5em 0 0.64286em 0;
+    border-bottom: 1px solid #939598;
+    width: 64%;
+}
+
+section.back::before {
+    content: '';
+    float: right;
+    height: 5.777em;
+    width: 5.777em;
+    /* margin-left: 1em; */
+}
+.activist section.back::before {
+	content: url('../img/suits/activist.svg');
+}
+.courage section.back::before {
+	content: url('../img/suits/courage.svg');
+}
+.creativity section.back::before {
+	content: url('../img/suits/creativity.svg');
+}
+.environmental section.back::before {
+	content: url('../img/suits/environmental.svg');
+}
+.movement section.back::before {
+	content: url('../img/suits/movement.svg');
+}
+.relational section.back::before {
+	content: url('../img/suits/relational.svg');
+}
+.ritual section.back::before {
+	content: url('../img/suits/ritual.svg');
+}
+.stillness section.back::before {
+	content: url('../img/suits/stillness.svg');
+}
+
+.card section.back .notes {
+	padding-top: 1.1em;
+	overflow-y: auto;
+  width: 100%;
+  max-height: 25em; /* 23.4em */
+  font-size: 0.76em; /* 0.76em */
+}
+.card section.back .notes * {
+  margin: 0 0 0.5em 0;
+  line-height: 1.2em;
+  font-size: 1em;
+}
+.card section.back .notes strong {
+	font-weight: bolder;
+}
+
+.card section.back .notes h1 {
+  font-weight: bold;
+}
+
+.card section.back .notes ol li {
+  list-style-type: decimal;
+  display: list-item;
+  margin: 0 0 0.2em 1.3em;
+  line-height: 1.1em;
+}
+
+.card section.back .notes ul li {
+  list-style-type: disc;
+  display: list-item;
+  margin: 0 0 0.2em 1.3em;
+  line-height: 1.1em;
+}
+
+p.credits {
+  margin: 0 auto;
+  font-size: 0.66667em;
+  text-align: right;
+/*     position: absolute; */
+/*     bottom: 1.5714em; */
+  line-height: 1.2em;
+/*     right: 1.5714em; */
+/*     width: 85%; */
+	padding: 1.1em 1.1em 0;
+	max-width: 62em;
+}
+p.credits a {
+	color: black;
+}
+
+/* *** SEARCH *** */
+div.search {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+div.search p strong{
+	font-weight: bold;
+}
+
+.search form {
+  position: relative;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 0.25em;
+  text-align: left;
+  margin: 0 auto 0.5em;
+  max-width: 800px;
+  border-top: 1px solid #999999;
+  border-radius: 0.75em;
+}
+
+.search input[type="search"] {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  left: 0;
+  padding: 0 0 0 1.2em;
+  font-size: 3em;
+  background: transparent url('../img/search.svg') scroll no-repeat left top;
+  background-size: contain;
+  width: 100%;
+}
+
+.search input[type="submit"] {
+  vertical-align: middle;
+  font-size: 1.5em;
+/*
+  position: absolute;
+  right: 0.25em;
+  top: 0.25em;
+  bottom: 0.25em;
+*/
+  display: block;
+  padding: 0.5em 1em;
+  background-color: black;
+  color: white;
+  border: transparent;
+  border-radius: 0.3125em;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media only screen and (min-width: 465px) {
+	.search input[type="search"] {
+	  padding: 0 2.7em 0 1.2em;
+	}
+	
+	.search input[type="submit"] {
+	  position: absolute;
+	  right: 0.25em;
+	  top: 0.25em;
+	  bottom: 0.25em;
+	  padding: 0 1em;
+	  width: auto;
+	}
+}
+
+
+/* *** FOOTER *** */
+.colophon {
+  float: right;
+  padding-top: 0.6em;
+  font-size: 0.85em;
+}
+@media only screen and (min-width: 355px) {
+	.colophon {
+		font-size: 1em;
+	}
+}
+
+.copyright {
+  float: left;
+  display: inline-block;
+  width: 50%;
+}
+footer a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+footer .copyright a img {
+  width: 2em;
+}
+
+footer.footer {
+  overflow: auto;
+  padding: 2em 1em 1em;
+}
+
+/* *** CARD FLIP *** */
+/* inspired by http://jsfiddle.net/nLhgT/25/ */
+
+ul.teaser>li.card {
+	height: 28em;
+	width: 21em; 
+	margin-bottom: 2.5em;
+	font-size: 12px;
+}
+
+.card>a>section.back {
+	display: none;
+}
+
+@media only screen and (min-width: 400px) {
+	ul.teaser>li.card {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	ul.teaser>li.card {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	ul.teaser>li.card {
+		font-size: 21px;
+	}
+}
+
+.card a.flippable {
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;
+	-webkit-perspective-origin-y: 14em;
+	-moz-perspective-origin-y: 14em;
+	-ms-perspective-origin-y: 14em;
+	perspective-origin-y: 14em;
+}
+
+.card a.flippable>section {
+	display: block;
+	position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+/*   -ms-backface-visibility: hidden; */
+  backface-visibility: hidden;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  -ms-transition-duration: 400ms;
+  transition-duration: 400ms;
+  z-index:10;
+}
+
+.card a.flippable>section.back {
+	z-index:0;	
+  -webkit-transform: rotateY(180deg);	
+  -moz-transform: rotateY(180deg);	
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  color: black;
+}
+
+.card a.flippable.flip>section.front {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+    z-index:0;
+}
+.card a.flippable.flip>section.back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    z-index:10;
+}
+
+.card>a.flippable+a.permalink {
+	display: none;
+	opacity: 0;
+	position: absolute;
+	height: 3em;
+	width: 3em;
+	color: white;
+	border-radius: 100%;
+	background: #999 url("../img/open_card.svg") no-repeat scroll center center;
+	bottom: 0;
+	right: -0.5em;
+  color: transparent;
+}
+
+.card>a.flippable.flip+a.permalink {
+	display: block;
+	opacity: 1;
+}
+
+.card>a.flippable.flip+a.permalink:active {
+	background-color: #444;
+}
+
+/* *** PRINT CSS *** */
+.card-icon.print {
+	display: none;
+	visibility: collapse;
+}
+@media only print {
+	nav {
+		display: none;
+		visibility: collapse;
+	}
+	#menutoggle {
+		display: none;
+		visibility: collapse;
+	}
+	.card {
+		width: 100%;
+	}
+	.card>section.front {
+		color: black;
+		background-color: white;
+	}
+	.card-icon {
+		display: none;
+		visibility: collapse;
+	}
+	.card-icon.print {
+		display: block;
+		visibility: visible;
+	}
+	.colophon {
+		display: none;
+	}
+}
