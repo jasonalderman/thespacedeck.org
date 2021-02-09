@@ -6,6 +6,7 @@
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
+    "export-for-real": "sapper export --legacy && rm -rf ./docs/* && cp -av ./__sapper__/export/* ./docs/",
     "start": "node __sapper__/build"
   },
   "dependencies": {
