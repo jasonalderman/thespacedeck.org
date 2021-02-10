@@ -1,9 +1,12 @@
 <script context="module">
+  import shuffle from '../util/shuffle.js';
+
 	export async function preload({ params }) {
 		const res = await this.fetch(`activity.json`);
 		const data = await res.json();
 
 		if (res.status === 200) {
+      shuffle(data);
 			return { cards: data };
 		} else {
 			this.error(res.status, data.message);
@@ -15,16 +18,6 @@
   import Card from '../components/Card.svelte';
 
   export let cards;
-
-  console.log(cards[0]);
-  // Fisher-Yates shuffling algorithm, from 
-  // https://javascript.info/task/shuffle
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-  }
 
 </script>
 

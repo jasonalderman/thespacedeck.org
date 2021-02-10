@@ -1,4 +1,5 @@
 <script context="module">
+  import shuffle from '../../util/shuffle';
 	export async function preload({ params }) {
 		// the `suitname` parameter is available because
 		// this file is called [suitname].svelte
@@ -6,6 +7,7 @@
 		const data = await res.json();
 
 		if (res.status === 200) {
+      shuffle(data?.cards);
 			return { suit: data };
 		} else {
 			this.error(res.status, data.message);
@@ -18,8 +20,6 @@
 
   export let suit;
   let properCase = (word) => word[0].toUpperCase() + word.substr(1)
-  
-  // shuffle cards here?
 </script>
 
 <style>
