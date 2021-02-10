@@ -6,9 +6,13 @@ The default template for setting up a [Sapper](https://github.com/sveltejs/sappe
 
 ## Getting started
 
-1. Follow the [gentle instructions here](https://svelte.dev/blog/svelte-for-new-developers) to install [node](https://nodejs.org/en/), if you do not already have it installed.
-2. Run `npm i` from the terminal in the root directory of this repository.
-3. Run `npm run dev` to run a dev server **_or_** `npm run export` to export the site. Right now, these build to a `__sapper__` folder, but we'll update the script to build to a `docs` folder that will let us use GitHub pages.
+Follow the [gentle instructions here](https://svelte.dev/blog/svelte-for-new-developers). 
+
+1. Install [node](https://nodejs.org/en/), if you do not already have it installed.
+2. Clone or download this repository.
+3. Using terminal, change directories into the root folder of this repository and run `npm i`.
+3. Run `npm run dev` to run a dev server at `localhost:3000` **_or_** run `npm run export` to export the site, then `npx serve ./__sapper__/export` to see it at `localhost:5000`. Does everything look right?
+4. When you're ready, deploy with `npm run deploy`. This will run `export` and then put the contents of the `__sapper__/export` folder into the `gh-pages` branch. (Right now, it deploys to Netlify: <https://sharp-nobel-7db756.netlify.app>)
 
 *and now the original template instructions, still to be cleaned up*
 
