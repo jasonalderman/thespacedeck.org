@@ -12,6 +12,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "front-matter": "^4.0.2",
+    "lunr": "^2.3.9",
     "marked": "^1.2.9",
     "polka": "next",
     "sirv": "^1.0.0"
