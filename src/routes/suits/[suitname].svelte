@@ -1,5 +1,5 @@
 <script context="module">
-  import shuffle from '../../util/shuffle';
+  // import shuffle from '../../util/shuffle';
 	export async function preload({ params }) {
 		// the `suitname` parameter is available because
 		// this file is called [suitname].svelte
@@ -7,7 +7,7 @@
 		const data = await res.json();
 
 		if (res.status === 200) {
-      shuffle(data?.cards);
+      // shuffle(data?.cards);
 			return { suit: data };
 		} else {
 			this.error(res.status, data.message);
@@ -27,6 +27,7 @@
 
 <svelte:head>
   <title>The Space Deck | {properCase(suit.title)} Suit</title>
+  <!-- add a shuffle here? -->
 </svelte:head>
 
 <div class="suit-intro">

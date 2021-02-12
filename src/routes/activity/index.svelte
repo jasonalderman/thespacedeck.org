@@ -19,6 +19,8 @@ import { goto } from '@sapper/app';
 export let cards;
 let randomIndex = Math.floor(Math.random()*(cards.length-0.5));
 let newCardUrl = cards[randomIndex].url;
+
+console.log('going to:', newCardUrl);
 goto(newCardUrl);
 
 function handleClick() {

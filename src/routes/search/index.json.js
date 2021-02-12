@@ -2,7 +2,7 @@ import cards from '../activity/_cards.js';
 import lunr from 'lunr';
 
 let cardsText = [];
-let cardLookup = {};
+// let cardLookup = {};
 cards.forEach((card) => {
   cardsText.push({
     id: card.slug,
@@ -10,7 +10,7 @@ cards.forEach((card) => {
     description: card.desc,
     back: card.backText?.replace(/(\n)/g, " ").replace(/(<([^>]+)>)/gi, "")
   });
-  cardLookup[card.slug] = card;
+  // cardLookup[card.slug] = card;
 });
 
 let idx = lunr(function() {
@@ -24,7 +24,7 @@ let idx = lunr(function() {
   }, this)
 });
 
-const contents = JSON.stringify({index: idx, lookup: cards});
+const contents = JSON.stringify({index: idx});
 
 export function get(req, res) {
 	res.writeHead(200, {
